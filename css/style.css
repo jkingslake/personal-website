@@ -111,24 +111,91 @@ h3 {
 }
 
 /* ══════════════════════════════════════════
-   HOME
+   HOME — hero + content
    ══════════════════════════════════════════ */
-#home { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+#home { padding: 0; }
 
-.home-name {
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: .01em;
-  color: var(--blue);
-  line-height: 1.15;
-  margin-bottom: .5rem;
+/* Hero banner */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('../images/gilkey-glacier.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.home-subtitle {
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 15, 50, 0.38) 0%,
+    rgba(0, 10, 40, 0.55) 100%
+  );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  max-width: 840px;
+}
+
+.hero-name {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,.45);
+}
+
+.hero-role {
   font-size: 1.05rem;
-  color: var(--text-light);
-  line-height: 1.55;
-  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: .06em;
+  line-height: 1.8;
+  opacity: .93;
+}
+
+.hero-location {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 2rem;
+  color: rgba(255,255,255,.72);
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+/* Content section below hero */
+.home-content {
+  padding: 4.5rem 1.5rem;
+}
+
+.home-content-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2.5rem 3rem;
+  align-items: start;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 24px rgba(0,0,0,.15);
+  border: 4px solid #fff;
+  outline: 1px solid var(--border);
 }
 
 .logo-row {
@@ -136,22 +203,22 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 2rem 0;
+  margin: 1.8rem 0;
 }
 
 .logo-row img {
-  height: 46px;
+  height: 44px;
   width: auto;
   object-fit: contain;
 }
 
 .contact-bar {
-  font-size: .95rem;
+  font-size: .93rem;
   color: var(--text-light);
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
 }
 
-.contact-bar a { margin-right: 1.25rem; }
+.contact-bar a { margin-right: 1.2rem; }
 
 /* ── Announce box ──────────────────────────── */
 .announce {
@@ -370,7 +437,11 @@ footer a:hover { text-decoration: underline; }
    RESPONSIVE
    ══════════════════════════════════════════ */
 @media (max-width: 720px) {
-  .home-name { font-size: 2.2rem; }
+  .hero-name { font-size: 2.4rem; letter-spacing: .08em; }
+  .hero-role { font-size: .93rem; }
+  .hero { min-height: 70vh; }
+  .home-content-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .logo-row { justify-content: center; }
   .section-title { font-size: 1.45rem; }
   .nav-brand { font-size: .9rem; }
   .nav-links a { padding: .7rem .5rem; font-size: .68rem; }
