@@ -1,0 +1,278 @@
+:root {
+  --blue: #003087;
+  --light-blue: #75aadb;
+  --text: #2d2d2d;
+  --light-text: #666;
+  --border: #e8e8e8;
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ── Navigation ────────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.nav-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.85rem 0.8rem;
+  text-decoration: none;
+  color: var(--light-text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  transition: color 0.18s;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+/* ── Sections ──────────────────────────────────────────────── */
+section {
+  padding: 5rem 1.5rem;
+}
+
+section:nth-child(even) {
+  background: var(--bg-alt);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Typography ────────────────────────────────────────────── */
+.section-title {
+  font-size: 1.85rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--blue);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--light-blue);
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1.4rem;
+}
+
+ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* ── Home section ──────────────────────────────────────────── */
+#home {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.home-name {
+  font-size: 2.9rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+
+.home-title {
+  font-size: 1.05rem;
+  color: var(--light-text);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.contact-line {
+  margin-bottom: 1.8rem;
+  font-size: 0.95rem;
+}
+
+/* ── Announce box ──────────────────────────────────────────── */
+.announce-box {
+  background: #ebf3fb;
+  border-left: 4px solid var(--blue);
+  padding: 1rem 1.4rem;
+  margin: 1.8rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+/* ── Publications ──────────────────────────────────────────── */
+.pub-year-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-top: 2.5rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-item {
+  margin-bottom: 0.9rem;
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--light-blue);
+  line-height: 1.58;
+  font-size: 0.96rem;
+}
+
+.pub-item em {
+  font-style: italic;
+}
+
+/* ── CV ────────────────────────────────────────────────────── */
+.cv-block {
+  margin-bottom: 0.2rem;
+}
+
+.cv-block h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blue);
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.5rem 1.2rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.cv-year {
+  font-weight: 700;
+  color: var(--light-text);
+  font-size: 0.88rem;
+  padding-top: 0.15rem;
+}
+
+@media (max-width: 600px) {
+  .cv-entry {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+  .cv-year {
+    font-size: 0.82rem;
+  }
+}
+
+/* ── Fieldwork ─────────────────────────────────────────────── */
+.fieldwork-block {
+  margin-bottom: 2.5rem;
+}
+
+/* ── Teaching ──────────────────────────────────────────────── */
+.course-item {
+  margin-bottom: 1.4rem;
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--light-blue);
+}
+
+.course-item .course-name {
+  font-weight: 700;
+}
+
+.course-item .course-detail {
+  font-size: 0.93rem;
+  color: var(--light-text);
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+footer {
+  background: #1a1a2e;
+  color: #aaa;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  font-size: 0.87rem;
+  line-height: 1.9;
+}
+
+footer a {
+  color: var(--light-blue);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .home-name {
+    font-size: 2.1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    padding: 0.7rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  section {
+    padding: 3.5rem 1.1rem;
+  }
+}
