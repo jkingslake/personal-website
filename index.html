@@ -353,6 +353,18 @@
         skidoo traverse from the 2013/14 austral summer was produced with music by
         Steve Massey.
       </p>
+      <div class="photo-strip-label">Antarctica, 2013&ndash;15</div>
+      <div class="photo-strip">
+        <img src="images/fieldwork/ant-01.jpg" alt="Antarctic fieldwork camp in a blizzard" loading="lazy">
+        <img src="images/fieldwork/ant-02.jpg" alt="Fieldwork on the West Antarctic Ice Sheet" loading="lazy">
+        <img src="images/fieldwork/ant-03.jpg" alt="West Antarctic Ice Sheet traverse" loading="lazy">
+        <img src="images/fieldwork/ant-04.jpg" alt="GPS and radar measurements, Antarctica" loading="lazy">
+        <img src="images/fieldwork/ant-05.jpg" alt="Skidoo traverse, Ronne Ice Shelf" loading="lazy">
+        <img src="images/fieldwork/ant-06.jpg" alt="Antarctica fieldwork scene" loading="lazy">
+        <img src="images/fieldwork/ant-07.jpg" alt="Radar survey, West Antarctica" loading="lazy">
+        <img src="images/fieldwork/ant-08.jpg" alt="Radar sled in Antarctica" loading="lazy">
+        <img src="images/fieldwork/ant-09.jpg" alt="British Antarctic Survey Twin Otter" loading="lazy">
+      </div>
     </div>
 
     <div class="fieldwork-entry">
@@ -363,6 +375,13 @@
         The project was led by Asa Rennermalm, Regine Hock, and Marco Tedesco. Conditions
         on the ice sheet were memorably windy.
       </p>
+      <div class="photo-strip-label">Greenland, 2017</div>
+      <div class="photo-strip">
+        <img src="images/fieldwork/grn-01.jpg" alt="Greenland Ice Sheet traverse" loading="lazy">
+        <img src="images/fieldwork/grn-02.jpg" alt="Greenland fieldwork camp" loading="lazy">
+        <img src="images/fieldwork/grn-03.jpg" alt="Greenland snow and firn measurements" loading="lazy">
+        <img src="images/fieldwork/grn-04.jpg" alt="Greenland Ice Sheet 2017" loading="lazy">
+      </div>
     </div>
 
     <div class="fieldwork-entry">
@@ -379,6 +398,19 @@
         near the ice divide. The drone also captured ogive sets produced by ice falls
         near the camp.
       </p>
+      <div class="photo-strip-label">Juneau Icefield, Alaska, 2018</div>
+      <div class="photo-strip">
+        <img src="images/gilkey-glacier.jpg" alt="Gilkey Glacier from the air, Juneau Icefield" loading="lazy">
+        <img src="images/alaska/ak-01.jpg" alt="Field equipment loaded for the Juneau Icefield" loading="lazy">
+        <img src="images/alaska/ak-02.jpg" alt="Juneau Icefield Research Program, 2018" loading="lazy">
+        <img src="images/alaska/ak-03.jpg" alt="Juneau Icefield camp" loading="lazy">
+        <img src="images/alaska/ak-04.jpg" alt="Ice core extraction, Juneau Icefield" loading="lazy">
+        <img src="images/alaska/ak-05.jpg" alt="Phase-sensitive radar on the Juneau Icefield" loading="lazy">
+        <img src="images/alaska/ak-06.jpg" alt="Juneau Icefield fieldwork 2018" loading="lazy">
+        <img src="images/alaska/ak-07.jpg" alt="Juneau Icefield 2018" loading="lazy">
+        <img src="images/alaska/ak-08.jpg" alt="Alaska fieldwork 2018" loading="lazy">
+        <img src="images/jonny-field.jpg" alt="Jonny Kingslake at Camp 18, Juneau Icefield" loading="lazy">
+      </div>
     </div>
 
   </div>
@@ -444,13 +476,20 @@
       </div>
     </div>
 
-    <h3>LDEO Open House 2018</h3>
+    <h3>LDEO Open House</h3>
     <p>
-      Exhibits included a large-scale glacier goo demonstration, an Augmented Reality
-      headset for manipulating a digital model of the Himalayas, a Google Earth tour with
-      a 3D mouse, and a glacier-goo feature-tracking experiment to illustrate ice velocity
-      measurements.
+      Exhibits at the annual Lamont Open House have included a large-scale glacier goo
+      demonstration, an Augmented Reality headset for manipulating a digital model of the
+      Himalayas, a Google Earth tour with a 3D mouse, and a glacier-goo feature-tracking
+      experiment to illustrate ice velocity measurements.
     </p>
+    <div class="photo-strip">
+      <img src="images/outreach/oh-01.jpg" alt="LDEO Open House outreach" loading="lazy">
+      <img src="images/outreach/oh-02.jpg" alt="LDEO Open House demonstration" loading="lazy">
+      <img src="images/outreach/oh-03.jpg" alt="Outreach event" loading="lazy">
+      <img src="images/travel/tr-01.jpg" alt="Outreach demonstration with equipment" loading="lazy">
+      <img src="images/travel/tr-03.jpg" alt="Outreach event with glacier model" loading="lazy">
+    </div>
 
   </div>
 </section>
@@ -467,6 +506,12 @@
       Reno, Nevada to New York City, passing through a succession of remarkable geological
       landscapes.
     </p>
+    <div class="photo-strip-label">US Road Trip, 2016</div>
+    <div class="photo-strip">
+      <img src="images/travel/tr-05.jpg" alt="Monument Valley, Arizona" loading="lazy">
+      <img src="images/travel/tr-04.jpg" alt="Eastern Sierra Nevada, California" loading="lazy">
+      <img src="images/travel/tr-02.jpg" alt="US road trip landscape" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -505,6 +550,23 @@
     loadContent('teaching-content', 'content/teaching.html');
     loadContent('cv-content',       'content/cv.html');
     loadContent('pubs-content',     'content/publications.html');
+
+    // Drag-to-scroll for all photo strips
+    document.querySelectorAll('.photo-strip').forEach(strip => {
+      let isDown = false, startX, scrollLeft;
+      strip.addEventListener('mousedown', e => {
+        isDown = true;
+        startX = e.pageX - strip.offsetLeft;
+        scrollLeft = strip.scrollLeft;
+      });
+      strip.addEventListener('mouseleave', () => { isDown = false; });
+      strip.addEventListener('mouseup',    () => { isDown = false; });
+      strip.addEventListener('mousemove',  e => {
+        if (!isDown) return;
+        e.preventDefault();
+        strip.scrollLeft = scrollLeft - (e.pageX - strip.offsetLeft - startX);
+      });
+    });
   });
 </script>
 
