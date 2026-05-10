@@ -21,6 +21,7 @@
     <div class="nav-links">
       <a href="#biography">Biography</a>
       <a href="#teaching">Teaching</a>
+      <a href="#group">Group</a>
       <a href="#cv">CV</a>
       <a href="#group-values">Group&nbsp;Values</a>
       <a href="#research">Research</a>
@@ -137,6 +138,19 @@
   <div class="container">
     <h2 class="section-title">Teaching</h2>
     <div id="teaching-content">
+      <p>Loading&hellip;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     GROUP
+     Content loaded from content/group.html
+     ══════════════════════════════════════════ -->
+<section id="group">
+  <div class="container">
+    <h2 class="section-title">Group</h2>
+    <div id="group-content">
       <p>Loading&hellip;</p>
     </div>
   </div>
@@ -548,6 +562,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     loadContent('bio-content',      'content/bio.html');
     loadContent('teaching-content', 'content/teaching.html');
+    loadContent('group-content',    'content/group.html');
     loadContent('cv-content',       'content/cv.html');
     loadContent('pubs-content',     'content/publications.html');
 

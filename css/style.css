@@ -428,6 +428,47 @@ h3 {
 }
 
 /* ══════════════════════════════════════════
+   GROUP
+   ══════════════════════════════════════════ */
+.group-member {
+  margin-bottom: 1.1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--blue-light);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.group-member strong { color: var(--text); }
+
+.group-dates {
+  font-size: .85rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-left: .5rem;
+}
+
+.group-tag {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin-left: .5rem;
+  opacity: .75;
+}
+
+.group-meta {
+  font-size: .87rem;
+  color: var(--text-light);
+  margin-top: .1rem;
+}
+
+.group-now {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* ══════════════════════════════════════════
    TEACHING
    ══════════════════════════════════════════ */
 .course-card {
