@@ -469,6 +469,65 @@ h3 {
 }
 
 /* ══════════════════════════════════════════
+   OPEN POSITIONS
+   ══════════════════════════════════════════ */
+.position-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.4rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  transition: box-shadow .2s;
+}
+
+.position-card:hover { box-shadow: var(--shadow); }
+
+.position-card--open {
+  border-left: 4px solid var(--blue);
+}
+
+.position-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-bottom: .65rem;
+}
+
+.position-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--text);
+}
+
+.position-badge {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .2rem .65rem;
+  border-radius: 99px;
+  background: var(--bg-alt);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+}
+
+.position-badge--open {
+  background: #e6f4ea;
+  color: #1a6930;
+  border-color: #b2dfbf;
+}
+
+.position-card p { font-size: .95rem; margin-bottom: .8rem; }
+
+.position-link {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* ══════════════════════════════════════════
    TEACHING
    ══════════════════════════════════════════ */
 .course-card {
