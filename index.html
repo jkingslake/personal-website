@@ -19,6 +19,7 @@
   <div class="nav-inner">
     <a class="nav-brand" href="#home">Jonny Kingslake</a>
     <div class="nav-links">
+      <a href="#positions">Join Us</a>
       <a href="#biography">Biography</a>
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
@@ -66,14 +67,8 @@
         </p>
 
         <div class="announce">
-          <strong>Interested in glaciology?</strong> I am growing our new glaciology group at
-          <a href="https://www.imperial.ac.uk/earth-science/">Imperial College London</a>. 
-          We have two open postdoctoral reserach scientist positions. Please see 
-          <a href="https://www.imperial.ac.uk/jobs/search-jobs/description/index.php?jobId=27968&jobTitle=Research+Associate+in+Glaciology">here</a> for more details.
-          While we are not actively recruiting graduate students at this time, 
-          we will be later this year, so if you are interested please feel free to register
-          your interest using
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXmF0DIUHT7Dux8wmkozVgogInNWNLkva2boVnHt79Zy_hdw/viewform?usp=publish-editor">this form</a>.
+          <strong>We are hiring!</strong> &rarr;
+          <a href="#positions">See open positions</a>
         </div>
 
         <div class="contact-bar">
@@ -86,6 +81,19 @@
     </div>
   </div>
 
+</section>
+
+<!-- ══════════════════════════════════════════
+     OPEN POSITIONS
+     Content loaded from content/positions.html
+     ══════════════════════════════════════════ -->
+<section id="positions">
+  <div class="container">
+    <h2 class="section-title">Join Us</h2>
+    <div id="positions-content">
+      <p>Loading&hellip;</p>
+    </div>
+  </div>
 </section>
 
 <!-- ══════════════════════════════════════════
@@ -634,6 +642,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     loadContent('bio-content',      'content/bio.html');
+    loadContent('positions-content','content/positions.html');
     loadContent('teaching-content', 'content/teaching.html');
     loadContent('group-content',    'content/group.html');
     loadContent('cv-content',       'content/cv.html');
