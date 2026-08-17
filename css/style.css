@@ -164,6 +164,18 @@ h3 {
   opacity: .93;
 }
 
+.hero-pitch {
+  font-size: .98rem;
+  font-weight: 300;
+  letter-spacing: .03em;
+  line-height: 1.7;
+  opacity: .82;
+  margin-top: 1.4rem;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero-location {
   position: absolute;
   bottom: 1.8rem;
